@@ -159,7 +159,6 @@ parseCase = do
     alts <- sepBySemicolon caseAlternative
     return (ECase expr alts)
 
---
 caseAlternative :: Parser CoreAlter 
 caseAlternative = do
     (num, vars) <- altHead
@@ -202,7 +201,10 @@ parseLambda :: Parser CoreExpr
 parseLambda = do
     lambdaPreamble
     -- at least a lambda parameter is required
-    params <- some validIdentifier
+    params <- parseLambdaParams
     lambdaBodyStart
     body <- parseExpr
     return (ELam params body)
+
+parseLambdaParams :: Parser [Name]
+parseLambdaParams = some validIdentifier
