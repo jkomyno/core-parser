@@ -1,5 +1,6 @@
 {-# OPTIONS_GHC -Wall #-}
 {-# OPTIONS_GHC -fno-warn-unused-do-bind #-}
+{-# OPTIONS_GHC -fno-warn-incomplete-patterns #-}
 
 {-
 contains the module Parse and in particular the definition of the Parser as a newtype, the definitions of the instances of
