@@ -12,8 +12,8 @@ import ParseUtils
 import ParseExpr
 
 -- Parses a list of supercombinator definitions
-parseProg :: Parser CoreProgram
-parseProg = sepBySemicolon parseSuperCombinator
+parseProgr :: Parser CoreProgram
+parseProgr = sepBySemicolon parseSuperCombinator
 
 {- ParseSuperCombinator -}
 
