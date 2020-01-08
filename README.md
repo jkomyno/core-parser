@@ -15,7 +15,7 @@ The data type of Core-language expression, *expr*, is defined as follows:
 data Expr a
   = EVar Name                   -- Variables
   | ENum Int                    -- Numbers
-  | AConstr Int Int             -- Constructor tag arity
+  | EConstr Int Int             -- Constructor tag arity
   | EAp (Expr a) (Expr a)       -- Applications
   | ELet                        -- Let(rec) expressions
       IsRec                       -- boolean with True = recursive
