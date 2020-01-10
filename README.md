@@ -48,3 +48,14 @@ The language's operators use the associativity rules defined in the following ta
 | `3`        | `None`        | `==, ~=, >, >=, <, <=` |
 | `2`        | `Right`       | `&`                    |
 | `1`        | `Right`       | `|`                    |
+
+## Commands
+
+* `stack build`: compiles the parser
+* `stack exec core-parser-exe`: executes the parser
+* `stack test`: runs unit tests (there are 20 unit tests, all passing)
+
+## Example
+
+By default, the main entrypoint reads a Core source file from the [./example.core](./example.core) file.
+You can create new examples and choose to import them in the program.
